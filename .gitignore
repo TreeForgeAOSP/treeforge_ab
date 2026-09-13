@@ -1,0 +1,126 @@
+# ============================================================
+# TreeForge A/B — repository publication boundary
+# ============================================================
+
+# Python bytecode / interpreter caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Test / analysis caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / editor / OS noise
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Local environment / credentials
+.env
+.env.*
+!.env.example
+*.key
+*.keys
+*.pem
+*.pk8
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# Generated TreeForge A/B output
+output/
+treeforge-ab-output/
+treeforge_ab_output/
+
+# Runtime provider staging
+runtime-tools/
+provider-cache/
+.cache/
+cache/
+
+# Repartition / GPT / device state
+repartition-state.json
+device-preflight.json
+repartition-plan.json
+conversion-preflight.json
+conversion-result.json
+install-plan.json
+install-report.txt
+*gpt-backup*
+*gpt-primary*
+*gpt-proposed*
+*repartition-state*
+*device-state*
+
+# Android build/image payloads must never be committed here
+aosp/
+out/
+*.img
+*.simg
+*.raw
+*.bin
+*.sparse
+*.super
+*.ota
+*.zip
+*.tar
+*.tar.gz
+*.tar.xz
+*.tgz
+*.txz
+
+# Factory/proprietary payload material
+factory-images/
+factory_image*/
+factory-input/
+google-images/
+proprietary/
+vendor-images/
+
+# Logs / temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+
+# Local smoke/audit output belongs in main TreeForge .smoke
+.smoke/
+
+# Coverage/profiling/debugging
+*.prof
+*.trace
+*.core
+core
+core.*
+
+# Local generated manifests/checksums that describe device runs
+SHA256SUMS.local
+*.device.json
+*.runtime.json

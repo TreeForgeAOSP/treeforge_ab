@@ -1,0 +1,30 @@
+schema_version = 1
+
+profile_id = "tangorpro-android15-r36-full-ab-v1"
+
+[device]
+product = "tangorpro"
+slot_count = 2
+required_unlocked = true
+required_bootloader_fastboot = true
+required_snapshot_status = "none"
+
+[software]
+required_bootloader = "tangorpro-15.2-13237001"
+validated_factory_build = "BP1A.250505.005"
+validated_aosp_release = "android-15.0.0_r36"
+android_major = 15
+sdk = 35
+
+[storage]
+disk = "/dev/block/sda"
+default_super_size = "20GB"
+alignment_bytes = 1048576
+stock_super_size_bytes = 8531214336
+stock_userdata_size_bytes = 118638071808
+
+[policy]
+unsupported_override = false
+download_factory_images = false
+automatic_android_reboot = false
+guided_slot_validation = true

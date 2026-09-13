@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "treeforge-ab"
+version = "1.0.0"
+description = "TreeForge full A/B storage conversion and installation tooling"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+dependencies = [
+    "typer>=0.12",
+]
+
+[project.scripts]
+treeforge-ab = "treeforge_ab.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+treeforge_ab = [
+    "data/*.json",
+    "profiles/**/*.toml",
+]

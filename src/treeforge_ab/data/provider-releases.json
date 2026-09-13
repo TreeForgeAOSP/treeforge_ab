@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "public_repository": "TreeForgeAOSP/treeforge_toolchain",
+  "canonical_cache": "~/.cache/treeforge/android-provider",
+  "providers": {
+    "aosp-adb": {
+      "release": "android-15.0.0_r36-linux-x86_64",
+      "release_tag": "aosp-adb/android-15.0.0_r36-1",
+      "asset": "aosp-adb-android-15.0.0_r36-linux-x86_64.tar.xz",
+      "archive_sha256": "ed16a48c7f62f3a9851cb6e4129d2b5fda01934a883e4b4b44d6dff95dc5f124",
+      "source_commit": "53056b875f3c9d365ca90e2ff8a6c262ed9c0365",
+      "required_files": [
+        "bin/adb"
+      ]
+    },
+    "aosp-fastboot": {
+      "release": "android-15.0.0_r36-linux-x86_64",
+      "release_tag": "aosp-fastboot/android-15.0.0_r36-1",
+      "asset": "aosp-fastboot-android-15.0.0_r36-linux-x86_64.tar.xz",
+      "archive_sha256": "122acd2acf32968157792e637fb0f0f2d6462362c4e0c53fc927d3690bfbc742",
+      "source_commit": "53056b875f3c9d365ca90e2ff8a6c262ed9c0365",
+      "required_files": [
+        "bin/fastboot"
+      ]
+    },
+    "android-image-tools": {
+      "release": "android-15.0.0_r36-linux-x86_64",
+      "release_tag": "android-image-tools/android-15.0.0_r36-1",
+      "asset": "android-image-tools-android-15.0.0_r36-linux-x86_64.tar.xz",
+      "archive_sha256": "23c41550fbbc56396ff9d67b17d1f4dc9e25cbeaae02b784c646b4e8363e4c59",
+      "source_commit": "53056b875f3c9d365ca90e2ff8a6c262ed9c0365",
+      "required_files": [
+        "bin/lpdump",
+        "bin/lpmake",
+        "bin/make_f2fs"
+      ]
+    }
+  }
+}
