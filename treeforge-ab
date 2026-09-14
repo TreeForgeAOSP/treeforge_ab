@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+CLI="$ROOT/.venv/bin/treeforge-ab"
+
+if [[ ! -x "$CLI" ]]; then
+    echo "TreeForge A/B is not installed in this checkout."
+    echo
+    echo "Run:"
+    echo "  ./setup.sh"
+    exit 2
+fi
+
+exec "$CLI" "$@"

@@ -52,6 +52,62 @@ After setup, the device must report:
 The tool verifies the device and storage geometry before permitting any
 destructive operation.
 
+## One-time conversion
+
+TreeForge A/B performs a **one-time physical repartitioning and full-A/B layout conversion**.
+
+The Android build used during the conversion is used to populate and validate the newly created A and B slots. It is **not** software that must remain installed on the device afterward.
+
+Once the conversion has completed successfully and both slots have been validated, the device remains in the TreeForge full-A/B layout. You can replace the Android software afterward with other compatible Android builds without rerunning the physical conversion.
+
+In practical terms:
+
+- TreeForge A/B does not need to remain installed on the device.
+- The Android build used for the initial conversion does not need to remain installed.
+- Future compatible Android builds can be flashed to the converted device.
+- The physical repartition/full-A/B conversion does not need to be repeated for each Android build.
+- The converted A/B storage layout remains in place until something intentionally repartitions the device again.
+- Restoring software that recreates the original stock partition layout may undo the TreeForge full-A/B conversion and require the conversion to be performed again.
+
+The `undo` command exists for intentionally restoring the supported immediate predecessor layout when appropriate.
+
+## Installation
+
+TreeForge A/B requires Python 3.11 or newer.
+
+Clone the repository:
+
+```bash
+git clone https://github.com/TreeForgeAOSP/treeforge_ab.git
+cd treeforge_ab
+```
+
+Create the repository-local environment and install TreeForge A/B:
+
+```bash
+./setup.sh
+```
+
+After setup, run the CLI directly from the repository:
+
+```bash
+./treeforge-ab --help
+./treeforge-ab inspect
+```
+
+You can also activate the repository-local environment and use the installed console command:
+
+```bash
+source .venv/bin/activate
+treeforge-ab --help
+```
+
+Or invoke the package as a Python module:
+
+```bash
+.venv/bin/python -m treeforge_ab --help
+```
+
 ## Installation source
 
 After the prerequisite setup is complete, TreeForge A/B consumes a
@@ -255,8 +311,8 @@ committed to the development repository.
 
 ## Release channel
 
-Current release: `1.0.0`
+Current release: `1.0.1`
 
-Python package version: `1.0.0`
+Python package version: `1.0.1`
 
 The public `1.0` release will be prepared separately after publication review.
