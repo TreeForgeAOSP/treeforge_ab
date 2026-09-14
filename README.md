@@ -311,8 +311,10 @@ committed to the development repository.
 
 ## Release channel
 
-Current release: `1.0.1`
+Current release: `1.0.2`
 
-Python package version: `1.0.1`
+Python package version: `1.0.2`
 
-The public `1.0` release will be prepared separately after publication review.
+TreeForge A/B `1.0.2` is published as a stable GitHub Release and immutable tag.
+
+The public release is published from `TreeForgeAOSP/treeforge_ab`, with the matching development release maintained in `TreeForgeDEV/treeforge_ab`.
